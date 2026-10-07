@@ -1,3 +1,4 @@
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -6,20 +7,21 @@ int main() {
     int total = 0;
     double average;
 
+    cout << "===== Grade Calculator =====" << endl;
     cout << "Enter 5 grades:" << endl;
 
-    //input&array
+    // Input grades and calculate total
     for (int i = 0; i < 5; i++) {
         cout << "Grade " << i + 1 << ": ";
         cin >> grades[i];
         total += grades[i];
     }
-
+    
     average = total / 5.0;
 
-    cout << "\nGrades:" << endl;
+    cout << "\n===== Grade Results =====" << endl;
 
-    //loop & if-else
+    // Display grades and pass/fail status
     for (int i = 0; i < 5; i++) {
         cout << "Grade " << i + 1 << ": " << grades[i];
 
@@ -32,6 +34,7 @@ int main() {
 
     cout << "\nAverage: " << average << endl;
 
+    // Display overall result
     if (average >= 75) {
         cout << "Overall: Passed" << endl;
     } else {
@@ -40,3 +43,4 @@ int main() {
 
     return 0;
 }
+```
