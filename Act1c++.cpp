@@ -4,6 +4,7 @@ using namespace std;
 int main() {
     int grades[5];
     int total = 0;
+    int highest, lowest;
     double average;
 
     cout << "===== Grade Calculator =====" << endl;
@@ -15,11 +16,26 @@ int main() {
         total += grades[i];
     }
 
+    highest = grades[0];
+    lowest = grades[0];
+
+    for (int i = 1; i < 5; i++) {
+        if (grades[i] > highest) {
+            highest = grades[i];
+        }
+
+        if (grades[i] < lowest) {
+            lowest = grades[i];
+        }
+    }
+
     average = total / 5.0;
 
     cout << "\n===== Grade Results =====" << endl;
     cout << "Total Grades: " << total << endl;
     cout << "Average: " << average << endl;
+    cout << "Highest Grade: " << highest << endl;
+    cout << "Lowest Grade: " << lowest << endl;
 
     return 0;
 }
